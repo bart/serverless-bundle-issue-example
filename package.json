@@ -1,0 +1,13 @@
+{
+  "name": "test-service",
+  "version": "1.0.0",
+  "description": "test-service",
+  "author": "bart",
+  "private": true,
+  "dependencies": {
+    "serverless-dynamodb-client": "0.0.2"
+  },
+  "devDependencies": {
+    "serverless-bundle": "^1.3.3"
+  }
+}
