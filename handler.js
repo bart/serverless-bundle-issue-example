@@ -4,8 +4,10 @@ dynamoDb.options.convertEmptyValues = true;
 exports.latest = async () => {
   const params = {
     TableName: process.env.DDB_TABLE,
-    Limit: 5,
-    ScanIndexForward: false
+    KeyConditionExpression: "id = :id",
+    ExpressionAttributeValues: {
+      ":id": "1"
+    }
   };
 
   const result = await dynamoDb.query(params).promise();
